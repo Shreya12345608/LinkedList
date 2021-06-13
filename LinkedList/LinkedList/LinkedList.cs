@@ -34,6 +34,7 @@ namespace LinkedList
             //print and inserted into the linked list
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
+        //UC2
         //method for Seconf Linkedlist
         internal void Add2(int data)
         {
@@ -63,12 +64,15 @@ namespace LinkedList
                 Console.WriteLine("Linked list is empty");
                 return;
             }
+            //UC3
+            Console.WriteLine("Sequence of LinkedList :-");
             // traverse and print data from head to last
             while (temp != null)
             {
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+            Console.WriteLine();
         }
     }
 }
