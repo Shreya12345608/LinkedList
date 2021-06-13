@@ -66,7 +66,7 @@ namespace LinkedList
                 //invaid position
                 Console.WriteLine("Invalid position");
             Console.WriteLine("Inserting " + data + " in positon " + position);
-          /// if position == 1
+            /// if position == 1
             if (position == 1)
             {
                 //creating a node with given data
@@ -105,7 +105,28 @@ namespace LinkedList
             this.head = this.head.next;
             return firstElement;
         }
-       
+        /// <summary>
+        /// REmove last element
+        /// </summary>
+        /// <returns></returns>
+        internal Node RemoveLastNode()
+        {
+            // head == null it will return null
+            if (head == null)
+                return null;
+            //if next head == null it will return null
+            if (head.next == null)
+                return null;
+            Node newNode = head;
+
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            Node lastElement = newNode.next;
+            newNode.next = null;
+            return lastElement;
+        }
         /// for display
         internal void Display()
         {

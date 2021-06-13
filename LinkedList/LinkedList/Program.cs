@@ -31,6 +31,11 @@ namespace LinkedList
             list.Display();
             //delete
             Console.WriteLine("First element popped out of the Linked List- " + list.RemoveFirstNode().data);
+            list.Display();
+            list.InsertAtParticularPosition(1, 56);
+            list.Display();
+            Console.WriteLine("Last element popped out of the Linked List- " + list.RemoveLastNode().data);
+            list.Display();
             Console.ReadLine();
         }
     }
