@@ -22,6 +22,12 @@ namespace LinkedList
             list.Add2(70);
             list.Add2(30);
             list.Add2(56);
+            //for UC3
+            list.Display();
+            list = new LinkedList();
+            list.Add(56);
+            list.Add(70);
+            list.InsertAtParticularPosition(2, 30);
             list.Display();
             Console.ReadLine();
         }

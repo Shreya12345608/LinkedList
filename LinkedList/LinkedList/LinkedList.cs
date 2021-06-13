@@ -53,6 +53,46 @@ namespace LinkedList
             //print
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
+        /// <summary>
+        /// method for insert at particular Position
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            //position < 1
+            if (position < 1)
+                //invaid position
+                Console.WriteLine("Invalid position");
+            Console.WriteLine("Inserting " + data + " in positon " + position);
+          /// if position == 1
+            if (position == 1)
+            {
+                //creating a node with given data
+                var newNode = new Node(data);
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            //position - position -1 ! = 0
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Position out of range");
+            }
+            return head;
+        }
         // for display
         internal void Display()
         {
