@@ -93,7 +93,20 @@ namespace LinkedList
             }
             return head;
         }
-        // for display
+        /// <summary>
+        /// /Remove first Node
+        /// </summary>
+        /// <returns></returns>
+        internal Node RemoveFirstNode()
+        {
+            if (this.head == null)
+                return null;
+            Node firstElement = this.head;
+            this.head = this.head.next;
+            return firstElement;
+        }
+       
+        /// for display
         internal void Display()
         {
             Node temp = this.head;
